@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b26b0e7e-ae58-4979-899f-626bbb809ab0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/PythonThumbnailGen.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/web/doubles-thumbnail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/web/json/image.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/web/singles-thumbnail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/web/styles/doubles-thumbnail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/web/styles/singles-thumbnail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thumbnailgen/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thumbnailgen/models/doubles_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thumbnailgen/models/image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thumbnailgen/models/singles_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thumbnailgen/util/common.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thumbnailgen/util/enums.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thumbnailgen/util/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Center_Image_Mask.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Center_Image_Mask.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/TestConfig/test_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/TestConfig/test_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/data/config.test.ini" beforeDir="false" afterPath="$PROJECT_DIR$/test/data/config.test.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thumbnailgen/util/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/thumbnailgen/util/config.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thumbnailgen/models/doubles_image.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thumbnailgen/models/image.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thumbnailgen/util/exceptions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thumbnailgen/models/singles_image.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thumbnailgen/util/enums.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thumbnailgen/util/common.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-169">
+              <folding>
+                <element signature="e#1#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/thumbnailgen/util/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#6#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/data/config.test.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/config.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="17" column="9" selection-start-line="17" selection-end-line="17" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/TestConfig/test_config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#6#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/resources/web/index.html" />
+        <option value="$PROJECT_DIR$/resources/web/doubles-thumbnail.html" />
+        <option value="$PROJECT_DIR$/resources/web/singles-thumbnail.html" />
+        <option value="$PROJECT_DIR$/resources/web/json/image.json" />
+        <option value="$PROJECT_DIR$/thumbnailgen/models/player.py" />
+        <option value="$PROJECT_DIR$/thumbnailgen/util/enums.py" />
+        <option value="$PROJECT_DIR$/thumbnailgen/models/doubles_image.py" />
+        <option value="$PROJECT_DIR$/thumbnailgen/util/exceptions.py" />
+        <option value="$PROJECT_DIR$/thumbnailgen/models/image.py" />
+        <option value="$PROJECT_DIR$/thumbnailgen/models/singles_image.py" />
+        <option value="$PROJECT_DIR$/thumbnailgen/util/common.py" />
+        <option value="$PROJECT_DIR$/config/config.ini" />
+        <option value="$PROJECT_DIR$/test/data/config.test.ini" />
+        <option value="$PROJECT_DIR$/test/TestConfig/test_config.py" />
+        <option value="$PROJECT_DIR$/thumbnailgen/util/config.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PythonThumbnailGen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonThumbnailGen" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonThumbnailGen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonThumbnailGen" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonThumbnailGen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonThumbnailGen" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonThumbnailGen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonThumbnailGen" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonThumbnailGen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonThumbnailGen" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="TestConfig" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonThumbnailGen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonThumbnailGen" type="462c0819:PsiDirectoryNode" />
+              <item name="thumbnailgen" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonThumbnailGen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonThumbnailGen" type="462c0819:PsiDirectoryNode" />
+              <item name="thumbnailgen" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonThumbnailGen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonThumbnailGen" type="462c0819:PsiDirectoryNode" />
+              <item name="thumbnailgen" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Brandon\Documents\Workspace\PythonThumbnailGen\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python tests.Nosetests in test_config.py">
+    <configuration name="Nosetests for test_config.TestConfig.test_should_get_height_from_config" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <module name="PythonThumbnailGen" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test/TestConfig" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_config.TestConfig.test_should_get_height_from_config&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Nosetests in test_config.py" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <module name="PythonThumbnailGen" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test/TestConfig" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/TestConfig/test_config.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Nosetests in test_config.py" />
+        <item itemvalue="Python tests.Nosetests for test_config.TestConfig.test_should_get_height_from_config" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b26b0e7e-ae58-4979-899f-626bbb809ab0" name="Default Changelist" comment="" />
+      <created>1562325022845</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562325022845</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Nosetests_for_test_config_TestConfig_test_should_get_height_from_config - 2019.07.05 at 08h 00m 40s.xml">
+      <configuration name="Nosetests for test_config.TestConfig.test_should_get_height_from_config" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_for_test_config_TestConfig_test_should_get_height_from_config - 2019.07.05 at 08h 09m 06s.xml">
+      <configuration name="Nosetests for test_config.TestConfig.test_should_get_height_from_config" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_for_test_config_TestConfig_test_should_get_height_from_config - 2019.07.05 at 08h 09m 28s.xml">
+      <configuration name="Nosetests for test_config.TestConfig.test_should_get_height_from_config" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_test_config_py - 2019.07.05 at 08h 09m 36s.xml">
+      <configuration name="Nosetests in test_config.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_test_config_py - 2019.07.05 at 09h 01m 00s.xml">
+      <configuration name="Nosetests in test_config.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_test_config_py - 2019.07.05 at 09h 02m 12s.xml">
+      <configuration name="Nosetests in test_config.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_test_config_py - 2019.07.05 at 09h 02m 43s.xml">
+      <configuration name="Nosetests in test_config.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_test_config_py - 2019.07.05 at 09h 03m 15s.xml">
+      <configuration name="Nosetests in test_config.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_test_config_py - 2019.07.05 at 09h 09m 24s.xml">
+      <configuration name="Nosetests in test_config.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_test_config_py - 2019.07.05 at 09h 09m 36s.xml">
+      <configuration name="Nosetests in test_config.py" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="10" y="20" width="1346" height="688" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32972974" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32972974" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/thumbnailgen/util/config.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/web/styles/doubles-thumbnail.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/web/styles/singles-thumbnail.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/web/doubles-thumbnail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="85" selection-start-line="3" selection-start-column="85" selection-end-line="3" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/web/singles-thumbnail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thumbnailgen/util/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thumbnailgen/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thumbnailgen/models/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thumbnailgen/models/player.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/web/json/image.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thumbnailgen/models/doubles_image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thumbnailgen/util/exceptions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thumbnailgen/models/image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thumbnailgen/models/singles_image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thumbnailgen/util/enums.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="17" column="9" selection-start-line="17" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/data/config.test.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thumbnailgen/util/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-169">
+          <folding>
+            <element signature="e#1#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/TestConfig/test_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#6#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thumbnailgen/util/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#6#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

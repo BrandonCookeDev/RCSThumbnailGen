@@ -1,0 +1,22 @@
+{
+  "image": {
+    "height": 720,
+    "width": 1080,
+    "backgroundImage": "",
+    "foregroundImage": ""
+  },
+  "tournament": {
+    "name": "",
+    "round": ""
+  },
+  "game": {
+    "name": "MELEE",
+    "type": "SINGLES"
+  },
+  "players": {
+    "player1": {
+      "tag": "",
+      "character": ""
+    }
+  }
+}
