@@ -17,14 +17,26 @@ div.middle-image{
     position: absolute;
 }
 
+div.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 6;
+}
+
 div.right-side{
-	position:fixed;
+	position: absolute;
 	width: 100%;
 	height: 100%;
 	z-index: -1;
 }
 
 img.character {
+
+}
+
+img.foreground-logo{
 
 }
 

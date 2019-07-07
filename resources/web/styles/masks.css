@@ -8,6 +8,8 @@ div.left-side-mask {
     mask-size: cover;
     mask-position: center;
     mask-repeat: no-repeat;
+    height: 100%;
+    width:100%;
 }
 
 div.middle-image-mask {
@@ -20,6 +22,8 @@ div.middle-image-mask {
     mask-size: cover;
     mask-position: center;
     mask-repeat: no-repeat;
+    height: 100%;
+    width:100%;
 }
 
 div.right-side-mask {
@@ -32,4 +36,6 @@ div.right-side-mask {
     mask-size: cover;
     mask-position: center;
     mask-repeat: no-repeat;
+    height: 100%;
+    width:100%;
 }
