@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="styles/singels-thumbnail.css" type="text/css" rel="stylesheet" />
+
+        <style>
+            html{
+                height: {{image_height}};
+                width: {{image_width}};
+                background-image: url({{image_background}});
+            }
+            body{
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="left-side">
+            <div class="player1">
+                <div class="character">
+                    <img src="{{p1_character_url}}" />
+                </div>
+
+                <div class="tag">
+                    {{p1_tag}}
+                </div>
+            </div>
+        </div>
+
+        <div class="middle-image">
+            <img src="{{image_foreground}}" />
+        </div>
+
+        <div class="right-side">
+            <div class="player2">
+                <div class="character">
+                    <img src="{{p2_character_url}}" />
+                </div>
+
+                <div class="tag">
+                    {{p2_tag}}
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

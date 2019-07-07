@@ -1,0 +1,35 @@
+div.left-side-mask {
+	-webkit-mask: url('../images/Left_Character_Mask.png');
+    -webkit-mask-size: cover;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask: url('../images/Left_Character_Mask.png');
+    mask-image: url('../images/Left_Character_Mask.png');
+    mask-size: cover;
+    mask-position: center;
+    mask-repeat: no-repeat;
+}
+
+div.middle-image-mask {
+	-webkit-mask: url('../images/Center_Image_Mask.png');
+    -webkit-mask-size: cover;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask: url('../images/Center_Image_Mask.png');
+    mask-image: url('../images/Center_Image_Mask.png');
+    mask-size: cover;
+    mask-position: center;
+    mask-repeat: no-repeat;
+}
+
+div.right-side-mask {
+	-webkit-mask: url('../images/Right_Character_Mask.png');
+    -webkit-mask-size: cover;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask: url('../images/Right_Character_Mask.png');
+    mask-image: url('../images/Right_Character_Mask.png');
+    mask-size: cover;
+    mask-position: center;
+    mask-repeat: no-repeat;
+}

@@ -80,4 +80,4 @@ class Config(object):
         }
 
     def get_config_json(self) -> str:
-        return json.dumps(self.get_config_object)
+        return json.dumps(self.get_config_object())
