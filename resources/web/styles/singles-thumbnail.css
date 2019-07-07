@@ -1,3 +1,10 @@
+.drop-shadow{
+    -webkit-filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.75));
+    -moz-filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.75));
+    -ms-filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.75));
+    -o-filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.75));
+}
+
 
 div.left-side{
 	position:fixed;
@@ -10,11 +17,10 @@ div.middle-image{
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 100%;
     height: 100%;
     width: 100%;
     z-index: 5;
-    position: absolute;
+    position: fixed;
 }
 
 div.middle-logo{
@@ -23,7 +29,7 @@ div.middle-logo{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     z-index: 6;
 }
 
@@ -45,7 +51,6 @@ div.logo{
 
 div.logo > img{
     height:100%;
-
 }
 
 img.foreground-image{
@@ -55,9 +60,29 @@ img.foreground-image{
 }
 
 img.right-character {
-    right: 0;
+    margin-top: 150px;
+    margin-left: 850px;
+    height: 1080px;
 }
 
 img.left-character {
-    left: 0
+    margin-top: -50px;
+    margin-left: -250px;
+    height: 1080px;
+
+}
+
+div.bottom-recursion-logo{
+    bottom: 0;
+    left: 0;
+    margin-bottom: 11%;
+    height: 13%;
+    width: 13%;
+    z-index: 8;
+    position: fixed;
+}
+
+img.recursion-logo{
+    height: 100%;
+    width: 100%;
 }

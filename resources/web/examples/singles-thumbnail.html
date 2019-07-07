@@ -9,19 +9,32 @@
             html{
                 height: 1080px;
                 width: 1920px;
-                background-image: url('../images/example-background.jpg');
             }
             body{
+                background-image: url('http://pavbca.com/walldb/original/0/9/5/228848.jpg');
+            }
 
+            div.player-bars{
+                z-index: 7;
+                position: fixed;
+                height: 100%;
+            }
+            img.player-bars{
+                height: 100%;
             }
         </style>
     </head>
     <body>
+        <div class="player-bars">
+            <img src="../images/Player_Bars.png"
+                class="player-bars"/>
+        </div>
+
         <div class="left-side">
             <div class="left-side-mask">
                 <div class="player1">
                     <div class="character">
-                        <img src="https://rcs-image-bucket.s3.amazonaws.com/Melee/Characters/Renders/Left/dk-Red.png"
+                        <img src="https://rcs-image-bucket.s3.amazonaws.com/Melee/Characters/Renders/Left/falcon-Neutral.png"
                             class="character left-character" />
                     </div>
 
@@ -34,15 +47,11 @@
 
         <div class="middle-image">
             <div class="middle-image-mask">
-                <img src="https://www.wallpaperhd.cc/wp-content/uploads/2018/12/1080p-Wallpapers-1.jpg" class="foreground-image" />
+                <img src="../images/1080p-Wallpapers-1.jpg" class="foreground-image" />
             </div>
         </div>
 
-        <div class="middle-logo">
-            <div class="logo">
-                <img src="../images/RecursionLogoRender.png" />
-            </div>
-        </div>
+
 
 
         <div class="right-side">
@@ -57,6 +66,18 @@
                         SDeems
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="middle-logo">
+            <div class="logo">
+                <img src="../images/RecursionLogo.jpg" class="drop-shadow" />
+            </div>
+        </div>
+
+        <div class="bottom-recursion-logo">
+            <div class="recursion-logo">
+                <img src="../images/RecursionLogoRender.png" class="drop-shadow recursion-logo" />
             </div>
         </div>
 
