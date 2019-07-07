@@ -17,7 +17,9 @@ div.middle-image{
     position: absolute;
 }
 
-div.logo{
+div.middle-logo{
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,7 +28,7 @@ div.logo{
 }
 
 div.right-side{
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 100%;
 	z-index: -1;
@@ -36,7 +38,13 @@ img.character {
 
 }
 
-img.foreground-logo{
+div.logo{
+    z-index: 6;
+    height: 25%;
+}
+
+div.logo > img{
+    height:100%;
 
 }
 
