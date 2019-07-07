@@ -2,16 +2,17 @@
 <html>
     <head>
         <link href="../styles/masks.css" type="text/css" rel="stylesheet" />
-        <link href="../styles/singels-thumbnail.css" type="text/css" rel="stylesheet" />
+        <link href="../styles/singles-thumbnail.css" type="text/css" rel="stylesheet" />
+        <link href="../styles/debug.css" type="text/css" rel="stylesheet" />
 
         <style>
             html{
-                height: 720;
-                width: 1080;
+                height: 1080px;
+                width: 1920px;
                 background-image: url('../images/example-background.jpg');
             }
             body{
-                
+
             }
         </style>
     </head>
@@ -20,7 +21,8 @@
             <div class="left-side-mask">
                 <div class="player1">
                     <div class="character">
-                        <img src="https://rcs-image-bucket.s3.amazonaws.com/Melee/Characters/Renders/Left/dk-Red.png" />
+                        <img src="https://rcs-image-bucket.s3.amazonaws.com/Melee/Characters/Renders/Left/dk-Red.png"
+                            class="character left-character" />
                     </div>
 
                     <div class="tag">
@@ -31,17 +33,22 @@
         </div>
 
         <div class="middle-image">
-            <img src="../images/example-foreground.jpg" />
+            <div class="middle-image-mask">
+                <img src="../images/example-foreground.jpg" class="foreground-image" />
+            </div>
         </div>
 
         <div class="right-side">
-            <div class="player2">
-                <div class="character">
-                    <img src="https://rcs-image-bucket.s3.amazonaws.com/Melee/Characters/Renders/Right/falcon-Green.png" />
-                </div>
+            <div class="right-side-mask">
+                <div class="player2">
+                    <div class="character">
+                        <img src="https://rcs-image-bucket.s3.amazonaws.com/Melee/Characters/Renders/Right/falcon-Green.png"
+                            class="character right-character" />
+                    </div>
 
-                <div class="tag">
-                    SDeems
+                    <div class="tag">
+                        SDeems
+                    </div>
                 </div>
             </div>
         </div>
