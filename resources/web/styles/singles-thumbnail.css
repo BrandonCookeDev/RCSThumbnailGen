@@ -1,3 +1,10 @@
+@font-face{
+  font-family: "KHand Semibold";
+  src: url('../fonts/khand/khand-semibold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .drop-shadow{
     -webkit-filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.75));
     -moz-filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.75));
@@ -48,7 +55,8 @@ div.right-side{
 }
 
 img.character {
-
+    height: 1080px;
+    width: 1920px;
 }
 
 div.logo{
@@ -66,6 +74,7 @@ img.foreground-image{
     z-index: 5;
 }
 
+/*
 img.right-character {
     margin-top: 150px;
     margin-left: 850px;
@@ -78,6 +87,7 @@ img.left-character {
     height: 1080px;
 
 }
+*/
 
 div.bottom-recursion-logo{
     bottom: 0;
@@ -92,4 +102,51 @@ div.bottom-recursion-logo{
 img.recursion-logo{
     height: 100%;
     width: 100%;
+}
+
+.text-shadow{
+    text-shadow: 1px 1px;
+}
+
+.tournament-round{
+    top:0;
+    right: 0;
+    margin-right: 30px;
+    position: fixed;
+    display: block;
+    text-align: right;
+    width: 25%;
+    font-family: 'KHand Semibold';
+    font-size: 72pt;
+    color: #f7f7f7;
+    z-index: 8;
+}
+
+div.left-tag{
+    top: 0;
+    margin-top: 25px;
+    margin-left: 330px;
+    position: fixed;
+    text-align: center;
+    width: 53%;
+    z-index: 8;
+    font-family: 'KHand Semibold';
+    font-size: 84pt;
+    letter-spacing: 1pt;
+    color: #f7f7f7;
+}
+
+div.right-tag{
+    bottom:0;
+    margin-bottom: -10px;
+    margin-left: 605px;
+    position: fixed;
+    text-align: center;
+    width: 53%;
+    z-index: 8;
+    font-family: 'KHand Semibold';
+    font-size: 84pt;
+    letter-spacing: 1pt;
+    color: #f7f7f7;
+
 }
