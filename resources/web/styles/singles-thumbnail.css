@@ -5,6 +5,13 @@
     -o-filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.75));
 }
 
+.drop-shadow-heavy{
+    -webkit-filter: drop-shadow(50px 50px 40px rgba(0,0,0,0.75));
+    -moz-filter: drop-shadow(50px 50px 40px rgba(0,0,0,0.75));
+    -ms-filter: drop-shadow(50px 50px 40px rgba(0,0,0,0.75));
+    -o-filter: drop-shadow(50px 50px 40px rgba(0,0,0,0.75));
+}
+
 
 div.left-side{
 	position:fixed;
