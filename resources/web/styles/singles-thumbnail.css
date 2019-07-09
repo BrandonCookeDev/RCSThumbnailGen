@@ -22,8 +22,10 @@
 
 div.left-side{
 	position:fixed;
+	/*
 	width: 100%;
 	height: 100%;
+	*/
 	z-index: -1;
 }
 
@@ -31,15 +33,19 @@ div.middle-image{
     display: flex;
     align-items: center;
     justify-content: center;
+    /*
     height: 100%;
     width: 100%;
+    */
     z-index: 5;
     position: fixed;
 }
 
 div.middle-logo{
+
     height: 100%;
     width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,8 +55,10 @@ div.middle-logo{
 
 div.right-side{
 	position: fixed;
+	/*
 	width: 100%;
 	height: 100%;
+	*/
 	z-index: -1;
 }
 
@@ -61,11 +69,9 @@ img.character {
 
 div.logo{
     z-index: 6;
-    height: 25%;
 }
 
 div.logo > img{
-    height:100%;
 }
 
 img.foreground-image{
@@ -108,6 +114,12 @@ img.recursion-logo{
     text-shadow: 1px 1px;
 }
 
+
+div.text-section{
+    height: 100%;
+    width: 100%;
+}
+
 .tournament-round{
     top:0;
     right: 0;
@@ -120,20 +132,24 @@ img.recursion-logo{
     font-size: 72pt;
     color: #f7f7f7;
     z-index: 8;
+    line-height: 1em;
 }
+
 
 div.left-tag{
     top: 0;
-    margin-top: 25px;
-    margin-left: 330px;
-    position: fixed;
+    margin-top: 1%;
+    margin-left: 10%;
     text-align: center;
-    width: 53%;
+    position: fixed;
+    width: 30%;
+    height: 11%;
     z-index: 8;
     font-family: 'KHand Semibold';
     font-size: 84pt;
     letter-spacing: 1pt;
     color: #f7f7f7;
+    background-color: teal;
 }
 
 div.right-tag{
