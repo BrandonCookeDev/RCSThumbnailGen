@@ -19,6 +19,14 @@
     -o-filter: drop-shadow(50px 50px 40px rgba(0,0,0,0.75));
 }
 
+.condensed-text{
+    -webkit-transform:scale(0.8, 1.0);
+    -moz-transform:scale(0.8, 1.0);
+    -ms-transform:scale(0.8, 1.0);
+    -o-transform:scale(0.8, 1.0);
+    transform:scale(0.8,1.0);
+}
+
 
 div.left-side{
 	position:fixed;
@@ -129,23 +137,24 @@ div.text-section{
 .tournament-round{
     top:0;
     left: 0;
-    margin-top: 10px;
-    margin-left: 1510px;
+    margin-top: 15px;
+    margin-left: 1450px;
     position: fixed;
     display: block;
     text-align: right;
-    width: 400px;
+    width: 500px;
     font-family: 'KHand Semibold';
-    font-size: 72pt;
+    font-size: 84pt;
     color: #f7f7f7;
     z-index: 8;
+    letter-spacing: 8pt;
     line-height: 1em;
 }
 
 
 div.left-tag{
     top: 0;
-    margin-top: 25px;
+    margin-top: 10px;
     margin-left: 340px;
     text-align: center;
     position: fixed;
@@ -153,14 +162,14 @@ div.left-tag{
     width: 950px;
     z-index: 8;
     font-family: 'KHand Semibold';
-    font-size: 84pt;
-    letter-spacing: 1pt;
+    font-size: 102pt;
+    letter-spacing: 2pt;
     color: #f7f7f7;
 }
 
 div.right-tag{
     top:0;
-    margin-top: 920px;
+    margin-top: 900px;
     margin-left: 625px;
     position: fixed;
     text-align: center;
@@ -168,8 +177,8 @@ div.right-tag{
     width: 950px;
     z-index: 8;
     font-family: 'KHand Semibold';
-    font-size: 84pt;
-    letter-spacing: 1pt;
+    font-size: 102pt;
+    letter-spacing: 2pt;
     color: #f7f7f7;
 
 }

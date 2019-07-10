@@ -49,6 +49,18 @@ class Config(object):
     def get_player_4_character(self):
         return str(self.config.get('PLAYERS', 'p4_character'))
 
+    def get_player_1_color(self):
+        return str(self.config.get('PLAYERS', 'p1_color'))
+
+    def get_player_2_color(self):
+        return str(self.config.get('PLAYERS', 'p2_color'))
+
+    def get_player_3_color(self):
+        return str(self.config.get('PLAYERS', 'p3_color'))
+
+    def get_player_4_color(self):
+        return str(self.config.get('PLAYERS', 'p4_color'))
+
     def get_game_name(self):
         return str(self.config.get('GAME', 'game_name'))
 

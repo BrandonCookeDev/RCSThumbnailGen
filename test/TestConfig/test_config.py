@@ -76,6 +76,18 @@ class TestConfig(TestCase):
 	def test_should_get_player_4_character_from_config(self):
 		self.assertEqual('Luigi', self.config_obj.get_player_4_character())
 
+	def test_should_get_player_1_color_from_config(self):
+		self.assertEqual('Blue', self.config_obj.get_player_1_color())
+
+	def test_should_get_player_2_color_from_config(self):
+		self.assertEqual('Neutral', self.config_obj.get_player_2_color())
+
+	def test_should_get_player_3_color_from_config(self):
+		self.assertEqual('Green', self.config_obj.get_player_3_color())
+
+	def test_should_get_player_4_color_from_config(self):
+		self.assertEqual('Red', self.config_obj.get_player_4_color())
+
 	def test_should_get_game_name_from_config(self):
 		self.assertEqual('MELEE', self.config_obj.get_game_name())
 

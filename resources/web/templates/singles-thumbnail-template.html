@@ -1,47 +1,116 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="styles/singels-thumbnail.css" type="text/css" rel="stylesheet" />
+        <link href="../styles/masks.css" type="text/css" rel="stylesheet" />
+        <link href="../styles/singles-thumbnail.css" type="text/css" rel="stylesheet" />
+        <link href="../styles/debug.css" type="text/css" rel="stylesheet" />
 
         <style>
             html{
-                height: {{image_height}};
-                width: {{image_width}};
-                background-image: url({{image_background}});
+                height: 1080px;
+                width: 1920px;
             }
             body{
-                
+                background-image: url('{{background_image}}');
+            }
+
+            div.player-bars{
+                z-index: 7;
+                position: fixed;
+            }
+            img.player-bars{
+                height: 100%;
+            }
+            div.recursion-logo{
+                height: 100%;
+            }
+            img.recursion-logo{
+                height: 100%;
+                width: 100%;
             }
         </style>
     </head>
     <body>
-        <div class="left-side">
-            <div class="player1">
-                <div class="character">
-                    <img src="{{p1_character_url}}" />
-                </div>
 
-                <div class="tag">
-                    {{p1_tag}}
+
+        <div class="left-side">
+            <div class="left-side-mask">
+                <div class="player1">
+                    <div class="character">
+                        <img src="https://rcs-image-bucket.s3.amazonaws.com/Melee/Characters/Renders/Left/{{p1_character}}-{{p1_color}}.png"
+                            class="character left-character" />
+                    </div>
+
+
                 </div>
             </div>
         </div>
 
         <div class="middle-image">
-            <img src="{{image_foreground}}" />
+            <div class="middle-image-mask">
+                <img src="{{foreground_image}}" class="foreground-image" />
+            </div>
         </div>
 
-        <div class="right-side">
-            <div class="player2">
-                <div class="character">
-                    <img src="{{p2_character_url}}" />
-                </div>
 
-                <div class="tag">
-                    {{p2_tag}}
+
+
+        <div class="right-side">
+            <div class="right-side-mask">
+                <div class="player2">
+                    <div class="character">
+                        <img src="https://rcs-image-bucket.s3.amazonaws.com/Melee/Characters/Renders/Right/{{p2_character}}-{{p2_color}}.png"
+                            class="character right-character" />
+                    </div>
+
                 </div>
             </div>
         </div>
+
+        <div class="middle-logo">
+            <div class="logo">
+                <img src="{{logo_image}}" class="drop-shadow" />
+            </div>
+        </div>
+
+
+        <div class="player-bars">
+            <img src="../images/Player_Bars.png"
+                class="player-bars"/>
+        </div>
+
+        <div class="recursion-logo">
+            <img src="../images/RecursionLogo.png"
+                class="recursion-logo"/>
+        </div>
+
+
+
+        <div class="text-section">
+
+            <div class="tournament-round text-shadow-bold condensed-text">
+                <span>{{tournament_round}}</span>
+            </div>
+
+            <div class="left-tag text-shadow-bold condensed-text">
+                <span>{{p1_tag}}</span>
+            </div>
+
+             <div class="right-tag text-shadow-bold condensed-text">
+                <span>{{p2_tag}}</span>
+            </div>
+
+        </div>
+
+
+        <!--
+        <div class="bottom-recursion-logo">
+            <div class="recursion-logo">
+                <img src="../images/RecursionLogoRender.png" class="drop-shadow-heavy recursion-logo" />
+            </div>
+        </div>
+        -->
+
 
     </body>
 </html>
