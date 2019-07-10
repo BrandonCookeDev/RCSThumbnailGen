@@ -6,19 +6,21 @@ from thumbnailgen.util.exceptions import NotImplementedException
 
 class Image(object):
 
-	def __init__(self, height=720, width=1080,
-				 background_image=None,
-				 foreground_image=None,
-				 game: Game = Game()):
-		self.height = height
-		self.width = width
-		self.background_image = background_image
-		self.foreground_image = foreground_image
-		self.game = game
-		self.json_file = str(Path(get_json_dir(), 'image.json'))
+    def __init__(self, height=1080, width=1920,
+                 background_image=None,
+                 foreground_image=None,
+                 logo_image=None,
+                 game: Game = Game()):
+        self.height = height
+        self.width = width
+        self.background_image = background_image
+        self.foreground_image = foreground_image
+        self.logo_image = logo_image
+        self.game = game
+        self.json_file = str(Path(get_json_dir(), 'image.json'))
 
-	def write_data(self):
-		raise NotImplementedException()
+    def write_data(self):
+        raise NotImplementedException()
 
-	def draw(self):
-		raise NotImplementedException()
+    def draw(self):
+        raise NotImplementedException()
