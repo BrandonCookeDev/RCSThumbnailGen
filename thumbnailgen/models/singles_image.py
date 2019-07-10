@@ -10,8 +10,11 @@ from thumbnailgen.util.config import Config
 from thumbnailgen.util.common import get_web_dir
 from thumbnailgen.util.io import get_file_content
 
-TEMPLATE_DIR = abspath(Path('..', '..', 'resources', 'web', 'templates'))
+ROOT_DIR = abspath(Path(__file__, '..', '..', '..'))
+OUTPUT_DIR = str(Path(ROOT_DIR, 'resources', 'web', 'output'))
+TEMPLATE_DIR = str(Path(ROOT_DIR, 'resources', 'web', 'templates'))
 TEMPLATE_FILE = str(Path(TEMPLATE_DIR, 'singles-thumbnail-template.html'))
+DEFAULT_OUTPUT_FILE = str(Path(OUTPUT_DIR, 'singles-thumbnail.html'))
 
 
 class SinglesImage(Image):
@@ -20,7 +23,7 @@ class SinglesImage(Image):
                  background_image=None,
                  foreground_image=None,
                  logo_image=None,
-                 filename='singles-thumbnail.html',
+                 filename=DEFAULT_OUTPUT_FILE,
                  game: Game = Game('MELEE', 'SINGLES'),
                  player1: Player = Player(),
                  player2: Player = Player()):
@@ -29,11 +32,47 @@ class SinglesImage(Image):
         self.player1 = player1
         self.player2 = player2
 
-    def merge_data(self, config=Config()):
-        template = get_file_content(TEMPLATE_FILE)
+    def get_merged_template(self):
+        template = SinglesImage.get_template()
+        merge_data = {
+            'players': {
+                'p1_tag': str(self.player1.tag).upper(),
+                'p2_tag': str(self.player2.tag).upper(),
+                'p1_character': str(self.player1.character).lower,
+                'p2_character': str(self.player2.character).lower,
+                'p1_color': self.player1.color,
+                'p2_color': self.player2.color,
+            },
+            'image': {
+                'background_image': self.background_image,
+                'foreground_image': self.foreground_image,
+                'logo_image': self.logo_image,
+            },
+            'game': {
+                'round': str(self.game.round).upper()
+            }
+        }
+        merged = pystache.render(template, merge_data)
+        return merged
+
+    def write_file(self):
+        merged_template = self.get_merged_template()
+        with open(self.html_file, 'w') as f:
+            f.write(merged_template)
+
+    @staticmethod
+    def get_template():
+        return get_file_content(TEMPLATE_FILE)
+
+    @staticmethod
+    def get_merged_template_from_config(config=Config()):
+        template = SinglesImage.get_template()
         config_data = config.get_config_object()
         merged = pystache.render(template, config_data)
         return merged
 
-    def write_file(self):
-        pass
+    @staticmethod
+    def write_file_with_config(filepath, config=Config()):
+        merged_template = SinglesImage.get_merged_template_from_config(config)
+        with open(filepath, 'w') as f:
+            f.write(merged_template)

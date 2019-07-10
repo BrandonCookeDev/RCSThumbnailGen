@@ -37,10 +37,9 @@
             <div class="left-side-mask">
                 <div class="player1">
                     <div class="character">
-                        <img src="https://rcs-image-bucket.s3.amazonaws.com/Melee/Characters/Renders/Left/{{players.p1_character}}-{{players.p1_color}}.png"
+                        <img id="p1CharacterImage" src=""
                             class="character left-character" />
                     </div>
-
 
                 </div>
             </div>
@@ -59,7 +58,7 @@
             <div class="right-side-mask">
                 <div class="player2">
                     <div class="character">
-                        <img src="https://rcs-image-bucket.s3.amazonaws.com/Melee/Characters/Renders/Right/{{players.p2_character}}-{{players.p2_color}}.png"
+                        <img id="p2CharacterImage" src=""
                             class="character right-character" />
                     </div>
 
@@ -88,19 +87,41 @@
         <div class="text-section">
 
             <div class="tournament-round text-shadow-bold condensed-text">
-                <span>{{game.round}}</span>
+                <span id="game_round" />
             </div>
 
-            <div class="left-tag text-shadow-bold condensed-text">
-                <span>{{players.p1_tag}}</span>
+            <div class="left-tag text-shadow condensed-text">
+                <span id="p1_tag" />
             </div>
 
-             <div class="right-tag text-shadow-bold condensed-text">
-                <span>{{players.p2_tag}}</span>
+             <div class="right-tag text-shadow condensed-text">
+                <span id="p2_tag" />
             </div>
-
         </div>
 
+        <script>
+            var leftCharacterUrl = 'https://rcs-image-bucket.s3.amazonaws.com/Melee/Characters/Renders/Left/'
+            var rightCharacterUrl = 'https://rcs-image-bucket.s3.amazonaws.com/Melee/Characters/Renders/Right/'
+
+            document.getElementById('game_round').innerHTML = "Winners Finals".toUpperCase();
+            document.getElementById('p1_tag').innerHTML = "cookiE".toUpperCase();
+            document.getElementById('p2_tag').innerHTML = "SDeems".toUpperCase();
+
+            var p1Character = "Falco".toLowerCase();
+            var p2Character = "Falco".toLowerCase();
+
+            function capitalizeColor(color){
+                return color[0].toUpperCase() + color.substring(1).toLowerCase()
+            }
+            var p1Color = capitalizeColor("green");
+            var p2Color = capitalizeColor("blue");
+
+            var character1Url = leftCharacterUrl + p1Character + '-' + p1Color + '.png';
+            var character2Url = rightCharacterUrl + p2Character + '-' + p2Color + '.png';
+
+            document.getElementById('p1CharacterImage').src = character1Url;
+            document.getElementById('p2CharacterImage').src = character2Url;
+        </script>
 
     </body>
 </html>
