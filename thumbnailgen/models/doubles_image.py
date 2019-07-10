@@ -24,4 +24,3 @@ class DoublesImage(Image):
         self.player2 = player2
         self.player3 = player3
         self.player4 = player4
-

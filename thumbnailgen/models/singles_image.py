@@ -29,11 +29,11 @@ class SinglesImage(Image):
         self.player1 = player1
         self.player2 = player2
 
-    def write_data(self, config=Config()):
+    def merge_data(self, config=Config()):
         template = get_file_content(TEMPLATE_FILE)
         config_data = config.get_config_object()
         merged = pystache.render(template, config_data)
         return merged
 
-    def draw(self):
+    def write_file(self):
         pass

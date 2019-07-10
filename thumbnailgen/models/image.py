@@ -19,8 +19,8 @@ class Image(object):
         self.game = game
         self.json_file = str(Path(get_json_dir(), 'image.json'))
 
-    def write_data(self):
+    def merge_data(self):
         raise NotImplementedException()
 
-    def draw(self):
+    def write_file(self):
         raise NotImplementedException()

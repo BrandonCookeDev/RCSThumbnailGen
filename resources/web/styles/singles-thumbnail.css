@@ -120,11 +120,11 @@ img.recursion-logo{
 }
 
 .text-shadow{
-    text-shadow: 1px 1px;
+    text-shadow: 10px 2px black;
 }
 
 .text-shadow-bold{
-    text-shadow: 5px 5px black;
+    text-shadow: 15px 1px black;
 }
 
 div.text-section{
@@ -137,7 +137,7 @@ div.text-section{
 .tournament-round{
     top:0;
     left: 0;
-    margin-top: 15px;
+    margin-top: 25px;
     margin-left: 1450px;
     position: fixed;
     display: block;
@@ -147,7 +147,7 @@ div.text-section{
     font-size: 84pt;
     color: #f7f7f7;
     z-index: 8;
-    letter-spacing: 8pt;
+    letter-spacing: 11pt;
     line-height: 1em;
 }
 
@@ -155,7 +155,7 @@ div.text-section{
 div.left-tag{
     top: 0;
     margin-top: 10px;
-    margin-left: 340px;
+    margin-left: 355px;
     text-align: center;
     position: fixed;
     height: 150px;
@@ -163,14 +163,14 @@ div.left-tag{
     z-index: 8;
     font-family: 'KHand Semibold';
     font-size: 102pt;
-    letter-spacing: 2pt;
+    letter-spacing: 11pt;
     color: #f7f7f7;
 }
 
 div.right-tag{
     top:0;
     margin-top: 900px;
-    margin-left: 625px;
+    margin-left: 630px;
     position: fixed;
     text-align: center;
     height: 150px;
@@ -178,7 +178,7 @@ div.right-tag{
     z-index: 8;
     font-family: 'KHand Semibold';
     font-size: 102pt;
-    letter-spacing: 2pt;
+    letter-spacing: 11pt;
     color: #f7f7f7;
 
 }
