@@ -124,7 +124,11 @@ img.recursion-logo{
 }
 
 .text-shadow-bold{
-    text-shadow: 15px 1px black;
+    text-shadow: 5px 5px 95px black,
+                 5px 5px 95px black,
+                 5px 5px 95px black,
+                 5px 5px 95px black,
+                 5px 5px 95px black;
 }
 
 div.text-section{
