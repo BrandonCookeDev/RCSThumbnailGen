@@ -33,6 +33,8 @@ div.middle-image{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 1080px;
+    width: 1920px;
     /*
     height: 100%;
     width: 100%;
@@ -42,10 +44,8 @@ div.middle-image{
 }
 
 div.middle-logo{
-
-    height: 100%;
-    width: 100%;
-
+    height: 1080px;
+    width: 1920px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,6 +72,7 @@ div.logo{
 }
 
 div.logo > img{
+    height: 250px;
 }
 
 img.foreground-image{
@@ -114,20 +115,26 @@ img.recursion-logo{
     text-shadow: 1px 1px;
 }
 
+.text-shadow-bold{
+    text-shadow: 5px 5px black;
+}
 
 div.text-section{
-    height: 100%;
-    width: 100%;
+    height: 1080px;
+    width: 1920px;
+    position: fixed;
+    z-index: 8;
 }
 
 .tournament-round{
     top:0;
-    right: 0;
-    margin-right: 30px;
+    left: 0;
+    margin-top: 10px;
+    margin-left: 1510px;
     position: fixed;
     display: block;
     text-align: right;
-    width: 25%;
+    width: 400px;
     font-family: 'KHand Semibold';
     font-size: 72pt;
     color: #f7f7f7;
@@ -138,27 +145,27 @@ div.text-section{
 
 div.left-tag{
     top: 0;
-    margin-top: 1%;
-    margin-left: 10%;
+    margin-top: 25px;
+    margin-left: 340px;
     text-align: center;
     position: fixed;
-    width: 30%;
-    height: 11%;
+    height: 150px;
+    width: 950px;
     z-index: 8;
     font-family: 'KHand Semibold';
     font-size: 84pt;
     letter-spacing: 1pt;
     color: #f7f7f7;
-    background-color: teal;
 }
 
 div.right-tag{
-    bottom:0;
-    margin-bottom: -10px;
-    margin-left: 605px;
+    top:0;
+    margin-top: 920px;
+    margin-left: 625px;
     position: fixed;
     text-align: center;
-    width: 53%;
+    height: 150px;
+    width: 950px;
     z-index: 8;
     font-family: 'KHand Semibold';
     font-size: 84pt;
