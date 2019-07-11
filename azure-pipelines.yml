@@ -27,13 +27,6 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'pip install -r requirements.txt'
-    
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      pwd
-      ls -R
 
 - task: Bash@3
   displayName: 'Unit Tests'
@@ -41,4 +34,3 @@ steps:
     targetType: 'inline'
     script: | 
       nosetests ./test
-      nosetests
