@@ -103,17 +103,17 @@
             var leftCharacterUrl = 'https://rcs-image-bucket.s3.amazonaws.com/Melee/Characters/Renders/Left/'
             var rightCharacterUrl = 'https://rcs-image-bucket.s3.amazonaws.com/Melee/Characters/Renders/Right/'
 
-            document.getElementById('game_round').innerHTML = "POOLS".toUpperCase();
-            document.getElementById('p1_tag').innerHTML = "MANGO".toUpperCase();
-            document.getElementById('p2_tag').innerHTML = "PPMD".toUpperCase();
+            document.getElementById('game_round').innerHTML = "LOSER SEMIS".toUpperCase();
+            document.getElementById('p1_tag').innerHTML = "SAVESTATE".toUpperCase();
+            document.getElementById('p2_tag').innerHTML = "COOKIE".toUpperCase();
 
-            var p1Character = "falco".toLowerCase();
-            var p2Character = "falco".toLowerCase();
+            var p1Character = "link".toLowerCase();
+            var p2Character = "sheik".toLowerCase();
 
             function capitalizeColor(color){
                 return color[0].toUpperCase() + color.substring(1).toLowerCase()
             }
-            var p1Color = capitalizeColor("Green");
+            var p1Color = capitalizeColor("White");
             var p2Color = capitalizeColor("Blue");
 
             var character1Url = leftCharacterUrl + p1Character + '-' + p1Color + '.png';

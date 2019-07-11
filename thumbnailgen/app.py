@@ -1,7 +1,8 @@
-
+from sys import argv
 from thumbnailgen.models.singles_image import SinglesImage
 from thumbnailgen.models.player import Player
 from thumbnailgen.models.game import Game
+
 
 if __name__ == '__main__':
     p1 = Player('Mango', 'Falco', 'Green')
@@ -16,3 +17,4 @@ if __name__ == '__main__':
         player2=p2
     )
     image.write_file()
+

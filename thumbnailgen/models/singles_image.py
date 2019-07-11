@@ -62,6 +62,8 @@ class SinglesImage(Image):
         merged_template = self.get_merged_template()
         with open(self.html_file, 'w') as f:
             f.write(merged_template)
+            
+        print('wrote thumbnail file to {}'.format(self.html_file))
 
     @staticmethod
     def get_template():
