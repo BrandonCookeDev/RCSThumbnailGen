@@ -2,6 +2,7 @@ from os import remove
 from os.path import abspath, exists
 from pathlib import Path
 from unittest import TestCase
+from thumbnailgen.util.common import get_root_dir
 from thumbnailgen.util.config import Config
 from thumbnailgen.models.singles_image import SinglesImage
 from thumbnailgen.models.player import Player
@@ -14,7 +15,8 @@ BACKGROUND_IMAGE = 'helloworld.jpg'
 FOREGROUND_IMAGE = 'test.png'
 LOGO_IMAGE = 'logo.png'
 
-DATA_DIR = abspath(Path('..', 'data'))
+ROOT_DIR = get_root_dir()
+DATA_DIR = str(Path(ROOT_DIR, 'test', 'data'))
 CONFIG_FILE = str(Path(DATA_DIR, 'config.test.ini'))
 TEST_OUTPUT_FILE = str(Path(DATA_DIR, 'test-singles-thumbnail.html'))
 
@@ -38,7 +40,47 @@ class TestSinglesImage(TestCase):
         player2=PLAYER2
     )
     config_obj = Config(file=CONFIG_FILE)
-    expected_singles_file = abspath(Path('..', 'data', 'expected-thumbnail.singles.html'))
+    expected_singles_file = abspath(Path(DATA_DIR, 'expected-thumbnail.singles.html'))
+    unmarshalled_data = {
+        'players': {
+            'p1_tag': 'cookiE',
+            'p2_tag': 'Silver',
+            'p1_character': 'Sheik',
+            'p2_character': 'Samus',
+            'p1_color': 'Blue',
+            'p2_color': 'Neutral'
+        },
+        'game': {
+            'round': 'Winners Finals',
+            'name': 'MELEE',
+            'type': 'SINGLES'
+        },
+        'image': {
+            'background_image': 'helloworld.jpg',
+            'foreground_image': 'test.png',
+            'logo_image': 'logo.png'
+        }
+    }
+    expected_marshalled_data = {
+        'players': {
+            'p1_tag': 'COOKIE',
+            'p2_tag': 'SILVER',
+            'p1_character': 'sheik',
+            'p2_character': 'samus',
+            'p1_color': 'Blue',
+            'p2_color': 'Neutral'
+        },
+        'game': {
+            'round': 'WINNERS FINALS',
+            'name': 'MELEE',
+            'type': 'SINGLES'
+        },
+        'image': {
+            'background_image': 'helloworld.jpg',
+            'foreground_image': 'test.png',
+            'logo_image': 'logo.png'
+        }
+    }
 
     def setUp(self) -> None:
         pass
@@ -46,6 +88,11 @@ class TestSinglesImage(TestCase):
     def tearDown(self) -> None:
         if exists(TEST_OUTPUT_FILE):
             remove(TEST_OUTPUT_FILE)
+
+    def test_should_marshall_data_correctly_for_singles_image(self):
+        expected = self.expected_marshalled_data
+        actual = SinglesImage.marshall_data(self.unmarshalled_data)
+        self.assertEqual(expected, actual)
 
     def test_pystache_template_is_written_correctly(self):
         expected = read_file(self.expected_singles_file)

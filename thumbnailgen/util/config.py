@@ -3,12 +3,15 @@ from configparser import ConfigParser
 from pathlib import Path
 from os.path import exists, isabs, abspath
 
-CONFIG_DIR = abspath(Path(__file__, '..', '..', '..', 'config'))
+from thumbnailgen.util.common import get_root_dir
+
+CONFIG_DIR = Path(get_root_dir(), 'config')
 CONFIG_FILE = str(Path(CONFIG_DIR, 'config.ini'))
 
 
 class Config(object):
     def __init__(self, file=CONFIG_FILE):
+        file = file if isabs(file) else abspath(file)
         if not exists(file):
             raise Exception('config file does not exist: {}'.format(file))
         self.file = file

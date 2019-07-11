@@ -4,16 +4,19 @@ from pathlib import Path
 from os.path import exists, abspath
 
 from thumbnailgen.util.config import Config
+from thumbnailgen.util.common import get_root_dir
+
+ROOT_DIR = get_root_dir()
 
 
 class TestConfig(TestCase):
-    DATA_DIR = abspath(Path('..', 'data'))
+    DATA_DIR = str(Path(ROOT_DIR, 'test', 'data'))
     CONFIG_FILE = str(Path(DATA_DIR, 'config.test.ini'))
     config_obj = None
     config_py_obj = {
         'image': {
-            'height': 720,
-            'width': 1080,
+            'height': 1080,
+            'width': 1920,
             'background_image': 'helloworld.jpg',
             'foreground_image': 'test.png',
             'logo_image': 'logo.png'
@@ -46,10 +49,10 @@ class TestConfig(TestCase):
         self.config_obj = None
 
     def test_should_get_height_from_config(self):
-        self.assertEqual(720, self.config_obj.get_image_height())
+        self.assertEqual(1080, self.config_obj.get_image_height())
 
     def test_should_get_width_from_config(self):
-        self.assertEqual(1080, self.config_obj.get_image_width())
+        self.assertEqual(1920, self.config_obj.get_image_width())
 
     def test_should_get_background_image_from_config(self):
         self.assertEqual('helloworld.jpg', self.config_obj.get_image_background())
