@@ -39,4 +39,6 @@ steps:
   displayName: 'Unit Tests'
   inputs:
     targetType: 'inline'
-    script: 'nosetests test'
+    script: | 
+      nosetests ./test
+      nosetests
