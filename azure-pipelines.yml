@@ -12,20 +12,33 @@ pool:
 
 steps:
 - checkout: self
+  displayName: 'Checkout Code'
   clean: 'all'
 
 - task: UsePythonVersion@0
+  displayName: 'User Python 3'
   inputs:
     versionSpec: '3.x'
     addToPath: true
     architecture: 'x64'
 
 - task: Bash@3
+  displayName: 'PIP Install'
   inputs:
     targetType: 'inline'
     script: 'pip install -r requirements.txt'
-
+    
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: 'nosetests test'
+    script: |
+      pwd
+      ls -R
+
+- task: Bash@3
+  displayName: 'Unit Tests'
+  inputs:
+    targetType: 'inline'
+    script: | 
+      nosetests ./test
+      nosetests
