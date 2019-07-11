@@ -2,15 +2,17 @@ import json
 import pystache
 from os.path import exists, abspath
 from pathlib import Path
+from copy import deepcopy
 
 from thumbnailgen.models.game import Game
 from thumbnailgen.models.image import Image
 from thumbnailgen.models.player import Player
 from thumbnailgen.util.config import Config
-from thumbnailgen.util.common import get_web_dir
 from thumbnailgen.util.io import get_file_content
+from thumbnailgen.util.common import get_root_dir, \
+    get_web_dir, capitalize_word
 
-ROOT_DIR = abspath(Path(__file__, '..', '..', '..'))
+ROOT_DIR = get_root_dir()
 OUTPUT_DIR = str(Path(ROOT_DIR, 'resources', 'web', 'output'))
 TEMPLATE_DIR = str(Path(ROOT_DIR, 'resources', 'web', 'templates'))
 TEMPLATE_FILE = str(Path(TEMPLATE_DIR, 'singles-thumbnail-template.html'))
@@ -38,10 +40,10 @@ class SinglesImage(Image):
             'players': {
                 'p1_tag': str(self.player1.tag).upper(),
                 'p2_tag': str(self.player2.tag).upper(),
-                'p1_character': str(self.player1.character).lower,
-                'p2_character': str(self.player2.character).lower,
-                'p1_color': self.player1.color,
-                'p2_color': self.player2.color,
+                'p1_character': str(self.player1.character).lower(),
+                'p2_character': str(self.player2.character).lower(),
+                'p1_color': capitalize_word(self.player1.color),
+                'p2_color': capitalize_word(self.player2.color),
             },
             'image': {
                 'background_image': self.background_image,
@@ -52,6 +54,7 @@ class SinglesImage(Image):
                 'round': str(self.game.round).upper()
             }
         }
+        merge_data = SinglesImage.marshall_data(merge_data)
         merged = pystache.render(template, merge_data)
         return merged
 
@@ -67,9 +70,22 @@ class SinglesImage(Image):
     @staticmethod
     def get_merged_template_from_config(config=Config()):
         template = SinglesImage.get_template()
-        config_data = config.get_config_object()
+        config_data = deepcopy(config.get_config_object())
+        config_data = SinglesImage.marshall_data(config_data)
         merged = pystache.render(template, config_data)
         return merged
+
+    @staticmethod
+    def marshall_data(data: dict) -> dict:
+        config_copy = deepcopy(data)
+        config_copy['players']['p1_tag'] = config_copy['players']['p1_tag'].upper()
+        config_copy['players']['p2_tag'] = config_copy['players']['p2_tag'].upper()
+        config_copy['players']['p1_character'] = config_copy['players']['p1_character'].lower()
+        config_copy['players']['p2_character'] = config_copy['players']['p2_character'].lower()
+        config_copy['players']['p1_color'] = capitalize_word(config_copy['players']['p1_color'])
+        config_copy['players']['p2_color'] = capitalize_word(config_copy['players']['p2_color'])
+        config_copy['game']['round'] = config_copy['game']['round'].upper()
+        return config_copy
 
     @staticmethod
     def write_file_with_config(filepath, config=Config()):
