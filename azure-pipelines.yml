@@ -5,15 +5,27 @@
 
 trigger:
 - master
+- devops
 
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- checkout: self
+  clean: 'all'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.x'
+    addToPath: true
+    architecture: 'x64'
+
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'pip install -r requirements.txt'
+
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'nosetests test'
