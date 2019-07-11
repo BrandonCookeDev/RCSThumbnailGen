@@ -19,8 +19,24 @@ class Image(object):
         self.game = game
         self.json_file = str(Path(get_json_dir(), 'image.json'))
 
-    def merge_data(self):
+    def get_merged_template(self):
         raise NotImplementedException()
 
     def write_file(self):
+        raise NotImplementedException()
+
+    @staticmethod
+    def get_template():
+        raise NotImplementedException()
+
+    @staticmethod
+    def get_merged_template_from_config():
+        raise NotImplementedException()
+
+    @staticmethod
+    def marshall_data():
+        raise NotImplementedException()
+
+    @staticmethod
+    def write_file_with_config():
         raise NotImplementedException()

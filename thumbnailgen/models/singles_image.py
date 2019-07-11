@@ -62,7 +62,7 @@ class SinglesImage(Image):
         merged_template = self.get_merged_template()
         with open(self.html_file, 'w') as f:
             f.write(merged_template)
-            
+
         print('wrote thumbnail file to {}'.format(self.html_file))
 
     @staticmethod
@@ -90,7 +90,9 @@ class SinglesImage(Image):
         return config_copy
 
     @staticmethod
-    def write_file_with_config(filepath, config=Config()):
+    def write_file_with_config(filepath=DEFAULT_OUTPUT_FILE, config=Config()):
         merged_template = SinglesImage.get_merged_template_from_config(config)
         with open(filepath, 'w') as f:
             f.write(merged_template)
+
+        print('wrote thumbnail file to {}'.format(filepath))

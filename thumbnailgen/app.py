@@ -1,20 +1,18 @@
 from sys import argv
+from thumbnailgen.util.config import Config
 from thumbnailgen.models.singles_image import SinglesImage
-from thumbnailgen.models.player import Player
-from thumbnailgen.models.game import Game
+from thumbnailgen.models.doubles_image import DoublesImage
 
-
+config = Config()
 if __name__ == '__main__':
-    p1 = Player('Mango', 'Falco', 'Green')
-    p2 = Player('PPMD', 'Falco', 'Blue')
-    game = Game('MELEE', 'SINGLES', 'Pools')
-    image = SinglesImage(
-        background_image='../images/RecursionBackground.png',
-        foreground_image='../images/1080p-Wallpapers-1.jpg',
-        logo_image='../images/RecursionLogo.jpg',
-        game=game,
-        player1=p1,
-        player2=p2
-    )
-    image.write_file()
+    type = config.get_game_type()
+    if type is None:
+        raise Exception('game_type cannot be null in config file')
+
+    if type.lower() == 'singles':
+        SinglesImage.write_file_with_config()
+    elif type.lower() == 'doubles':
+        DoublesImage.write_file_with_config()
+    else:
+        raise Exception('unknown game type: {}'.format(type))
 
