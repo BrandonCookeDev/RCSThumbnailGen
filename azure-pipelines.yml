@@ -34,3 +34,10 @@ steps:
     targetType: 'inline'
     script: | 
       nosetests ./test
+
+- task: ado-discord-webhook@1
+  inputs:
+    channelId: '598686758284296233'
+    webhookKey: 'XVWtv9p2hkzd8rxLFYxMj2YCpaunjbzRyEpBs2uvbuf_lOF0kKMYutAJPvaxJxWWkRT0'
+    messageType: 'content'
+    content: 'Completed Build of RCSThumbnailGen'
