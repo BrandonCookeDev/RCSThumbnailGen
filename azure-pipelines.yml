@@ -36,6 +36,7 @@ steps:
       nosetests ./test
 
 - task: ado-discord-webhook@1
+  displayName: 'Discord Webhook Notification'
   inputs:
     channelId: '598686758284296233'
     webhookKey: 'XVWtv9p2hkzd8rxLFYxMj2YCpaunjbzRyEpBs2uvbuf_lOF0kKMYutAJPvaxJxWWkRT0'
