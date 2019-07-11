@@ -41,6 +41,7 @@ class TestConfig(TestCase):
             'round': 'Winners Finals'
         }
     }
+    config_json_obj = json.dumps(config_py_obj)
 
     def setUp(self):
         self.config_obj = Config(self.CONFIG_FILE)
@@ -114,3 +115,9 @@ class TestConfig(TestCase):
         expected = json.dumps(self.config_py_obj)
         actual = self.config_obj.get_config_json()
         self.assertEqual(expected, actual)
+
+    def test_should_get_the_right_merged_config_content(self):
+        with open(self.CONFIG_FILE, 'r') as f:
+            expected = f.read()
+            actual = Config.get_merged_config_template_content(self.config_json_obj)
+            self.assertEqual(expected, actual)

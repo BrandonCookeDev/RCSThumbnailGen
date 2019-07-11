@@ -1,4 +1,5 @@
 import json
+import pystache
 from configparser import ConfigParser
 from pathlib import Path
 from os.path import exists, isabs, abspath
@@ -7,7 +8,7 @@ from thumbnailgen.util.common import get_root_dir
 
 CONFIG_DIR = Path(get_root_dir(), 'config')
 CONFIG_FILE = str(Path(CONFIG_DIR, 'config.ini'))
-
+CONFIG_TEMPLATE = str(Path(CONFIG_DIR, 'config.template.ini'))
 
 class Config(object):
     def __init__(self, file=CONFIG_FILE):
@@ -110,3 +111,21 @@ class Config(object):
 
     def get_config_json(self) -> str:
         return json.dumps(self.get_config_object())
+
+    @staticmethod
+    def get_template():
+        with open(CONFIG_TEMPLATE, 'r') as f:
+            return f.read()
+
+    @staticmethod
+    def get_merged_config_template_content(json_str: str):
+        o = json.loads(json_str)
+        template = Config.get_template()
+        merged = pystache.render(template, o)
+        return merged
+
+    @staticmethod
+    def write_merged_config_template(json_str: str):
+        merged = Config.get_merged_config_template_content(json_str)
+        with open(CONFIG_FILE, 'w') as f:
+            f.write(merged)
