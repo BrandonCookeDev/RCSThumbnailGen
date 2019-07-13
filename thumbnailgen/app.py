@@ -5,7 +5,7 @@ from thumbnailgen.models.singles_image import SinglesImage
 from thumbnailgen.models.doubles_image import DoublesImage
 from thumbnailgen.util.common import get_root_dir
 from thumbnailgen.util.screenshoter import screenshot_file
-from thumbnailgen.util.image_util import cutoff_width
+from thumbnailgen.util.image_util import cutoff_width, convert_to_jpg, resize
 
 config = Config()
 if __name__ == '__main__':
@@ -18,6 +18,8 @@ if __name__ == '__main__':
         dest_image_location = str(Path(get_root_dir(), 'singles-thumbnail.png'))
         screenshot_file(html_output_location, dest_image_location)
         cutoff_width(dest_image_location, 780)
+        resize(dest_image_location, 1290, 720)
+        convert_to_jpg(dest_image_location, 90)
     elif type.lower() == 'doubles':
         DoublesImage.write_file_with_config()
     else:

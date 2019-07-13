@@ -35,3 +35,9 @@ def get_resources_dir():
 
 def capitalize_word(word: str) -> str:
     return word[0].upper() + word[1:].lower()
+
+
+def change_file_extension(file, new_extension):
+    ext = Path(file).suffix
+    new_extension = new_extension if new_extension[0] == '.' else '.' + new_extension
+    return file[:len(file) - (len(ext))] + new_extension
