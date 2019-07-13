@@ -41,4 +41,13 @@ steps:
     channelId: '598686758284296233'
     webhookKey: 'XVWtv9p2hkzd8rxLFYxMj2YCpaunjbzRyEpBs2uvbuf_lOF0kKMYutAJPvaxJxWWkRT0'
     messageType: 'content'
-    content: 'Completed Build $(Build.BuildNumber) of RCSThumbnailGen'
+    content: 'RCSThumbnailGen: Build $(Build.BuildNumber) **Succeeded**'
+
+- task: ado-discord-webhook@1
+  displayName: 'Discord Webhook Notification'
+  condition: failed()
+  inputs:
+    channelId: '598686758284296233'
+    webhookKey: 'XVWtv9p2hkzd8rxLFYxMj2YCpaunjbzRyEpBs2uvbuf_lOF0kKMYutAJPvaxJxWWkRT0'
+    messageType: 'content'
+    content: 'RCSThumbnailGen: Build $(Build.BuildNumber) Failed'
