@@ -11,7 +11,10 @@
                 width: 1920px;
             }
             body{
-                background-image: url('{{image.background_image}}');
+                background-image: url('../images/RecursionBackground.png');
+                background-size: 1920px 1080px;
+                background-repeat: no-repeat;
+                position: fixed;
             }
 
             div.player-bars{
@@ -121,6 +124,7 @@
 
             document.getElementById('p1CharacterImage').src = character1Url;
             document.getElementById('p2CharacterImage').src = character2Url;
+            document.body.style.zoom = "80%"
         </script>
 
     </body>

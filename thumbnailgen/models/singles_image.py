@@ -58,12 +58,13 @@ class SinglesImage(Image):
         merged = pystache.render(template, merge_data)
         return merged
 
-    def write_file(self):
+    def write_file(self) -> str:
         merged_template = self.get_merged_template()
         with open(self.html_file, 'w') as f:
             f.write(merged_template)
 
         print('wrote thumbnail file to {}'.format(self.html_file))
+        return self.html_file
 
     @staticmethod
     def get_template():
@@ -90,9 +91,10 @@ class SinglesImage(Image):
         return config_copy
 
     @staticmethod
-    def write_file_with_config(filepath=DEFAULT_OUTPUT_FILE, config=Config()):
+    def write_file_with_config(filepath=DEFAULT_OUTPUT_FILE, config=Config()) -> str:
         merged_template = SinglesImage.get_merged_template_from_config(config)
         with open(filepath, 'w') as f:
             f.write(merged_template)
 
         print('wrote thumbnail file to {}'.format(filepath))
+        return filepath
