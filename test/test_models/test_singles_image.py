@@ -72,7 +72,7 @@ class TestSinglesImage(TestCase):
         },
         'game': {
             'round': 'WINNERS FINALS',
-            'name': 'MELEE',
+            'name': 'Melee',
             'type': 'SINGLES'
         },
         'image': {

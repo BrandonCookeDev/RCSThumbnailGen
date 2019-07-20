@@ -38,12 +38,12 @@ class SinglesImage(Image):
         template = SinglesImage.get_template()
         merge_data = {
             'players': {
-                'p1_tag': str(self.player1.tag).upper(),
-                'p2_tag': str(self.player2.tag).upper(),
-                'p1_character': capitalize_word(str(self.player1.character)),
-                'p2_character': capitalize_word(str(self.player2.character)),
-                'p1_color': self.player1.color.lower(),
-                'p2_color': self.player2.color.lower(),
+                'p1_tag': str(self.player1.tag),
+                'p2_tag': str(self.player2.tag),
+                'p1_character': str(self.player1.character),
+                'p2_character': str(self.player2.character),
+                'p1_color': self.player1.color,
+                'p2_color': self.player2.color,
             },
             'image': {
                 'background_image': self.background_image,
@@ -51,7 +51,8 @@ class SinglesImage(Image):
                 'logo_image': self.logo_image,
             },
             'game': {
-                'round': str(self.game.round).upper()
+                'round': str(self.game.round),
+                'name': str(self.game.name)
             }
         }
         merge_data = SinglesImage.marshall_data(merge_data)
@@ -88,6 +89,7 @@ class SinglesImage(Image):
         config_copy['players']['p1_color'] = config_copy['players']['p1_color'].lower()
         config_copy['players']['p2_color'] = config_copy['players']['p2_color'].lower()
         config_copy['game']['round'] = config_copy['game']['round'].upper()
+        config_copy['game']['name'] = capitalize_word(config_copy['game']['name'])
         return config_copy
 
     @staticmethod
