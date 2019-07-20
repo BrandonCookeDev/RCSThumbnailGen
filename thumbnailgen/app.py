@@ -19,7 +19,7 @@ if __name__ == '__main__':
         dest_image_location = str(Path(get_root_dir(), 'singles-thumbnail.png'))
         screenshot_file(html_output_location, dest_image_location)
         cutoff_width(dest_image_location, 1150)
-        cutoff_height(dest_image_location, 175)
+        cutoff_height(dest_image_location, 300)
         resize(dest_image_location, 1290, 720)
         convert_to_jpg(dest_image_location, 90)
     elif type.lower() == 'doubles':

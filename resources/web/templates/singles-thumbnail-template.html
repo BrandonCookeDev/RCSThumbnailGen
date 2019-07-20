@@ -34,13 +34,12 @@
         </style>
     </head>
     <body>
-
-
         <div class="left-side">
             <div class="left-side-mask">
                 <div class="player1">
                     <div class="character">
-                        <img id="p1CharacterImage" src=""
+                        <img id="p1CharacterImage"
+                            src="https://rcs-image-bucket.s3.amazonaws.com/Melee/Characters/Renders/Singles/Left/{{players.p1_character}}/{{players.p1_color}}.png"
                             class="character left-character" />
                     </div>
 
@@ -54,14 +53,12 @@
             </div>
         </div>
 
-
-
-
         <div class="right-side">
             <div class="right-side-mask">
                 <div class="player2">
                     <div class="character">
-                        <img id="p2CharacterImage" src=""
+                        <img id="p2CharacterImage"
+                            src="https://rcs-image-bucket.s3.amazonaws.com/Melee/Characters/Renders/Singles/Right/{{players.p2_character}}/{{players.p2_color}}.png"
                             class="character right-character" />
                     </div>
 
@@ -90,42 +87,19 @@
         <div class="text-section">
 
             <div class="tournament-round text-shadow-bold condensed-text">
-                <span id="game_round" />
+                <span id="game_round">{{game.round}}</span>
             </div>
 
             <div class="left-tag text-shadow condensed-text">
-                <span id="p1_tag" />
+                <span id="p1_tag">{{players.p1_tag}}</span>
             </div>
 
              <div class="right-tag text-shadow condensed-text">
-                <span id="p2_tag" />
+                 <span id="p2_tag">{{players.p2_tag}}</span>
             </div>
         </div>
 
-        <script>
-            var leftCharacterUrl = 'https://rcs-image-bucket.s3.amazonaws.com/Melee/Characters/Renders/Left/'
-            var rightCharacterUrl = 'https://rcs-image-bucket.s3.amazonaws.com/Melee/Characters/Renders/Right/'
-
-            document.getElementById('game_round').innerHTML = "{{game.round}}".toUpperCase();
-            document.getElementById('p1_tag').innerHTML = "{{players.p1_tag}}".toUpperCase();
-            document.getElementById('p2_tag').innerHTML = "{{players.p2_tag}}".toUpperCase();
-
-            var p1Character = "{{players.p1_character}}".toLowerCase();
-            var p2Character = "{{players.p2_character}}".toLowerCase();
-
-            function capitalizeColor(color){
-                return color[0].toUpperCase() + color.substring(1).toLowerCase()
-            }
-            var p1Color = capitalizeColor("{{players.p1_color}}");
-            var p2Color = capitalizeColor("{{players.p2_color}}");
-
-            var character1Url = leftCharacterUrl + p1Character + '-' + p1Color + '.png';
-            var character2Url = rightCharacterUrl + p2Character + '-' + p2Color + '.png';
-
-            document.getElementById('p1CharacterImage').src = character1Url;
-            document.getElementById('p2CharacterImage').src = character2Url;
-            document.body.style.zoom = "70%"
-        </script>
-
+        <!-- force zoom out for the image is too big for the window -->
+        <script> document.body.style.zoom = "70%" </script>
     </body>
 </html>

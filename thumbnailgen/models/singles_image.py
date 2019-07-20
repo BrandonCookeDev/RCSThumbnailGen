@@ -40,10 +40,10 @@ class SinglesImage(Image):
             'players': {
                 'p1_tag': str(self.player1.tag).upper(),
                 'p2_tag': str(self.player2.tag).upper(),
-                'p1_character': str(self.player1.character).lower(),
-                'p2_character': str(self.player2.character).lower(),
-                'p1_color': capitalize_word(self.player1.color),
-                'p2_color': capitalize_word(self.player2.color),
+                'p1_character': capitalize_word(str(self.player1.character)),
+                'p2_character': capitalize_word(str(self.player2.character)),
+                'p1_color': self.player1.color.lower(),
+                'p2_color': self.player2.color.lower(),
             },
             'image': {
                 'background_image': self.background_image,
@@ -83,10 +83,10 @@ class SinglesImage(Image):
         config_copy = deepcopy(data)
         config_copy['players']['p1_tag'] = config_copy['players']['p1_tag'].upper()
         config_copy['players']['p2_tag'] = config_copy['players']['p2_tag'].upper()
-        config_copy['players']['p1_character'] = config_copy['players']['p1_character'].lower()
-        config_copy['players']['p2_character'] = config_copy['players']['p2_character'].lower()
-        config_copy['players']['p1_color'] = capitalize_word(config_copy['players']['p1_color'])
-        config_copy['players']['p2_color'] = capitalize_word(config_copy['players']['p2_color'])
+        config_copy['players']['p1_character'] = capitalize_word(config_copy['players']['p1_character'])
+        config_copy['players']['p2_character'] = capitalize_word(config_copy['players']['p2_character'])
+        config_copy['players']['p1_color'] = config_copy['players']['p1_color'].lower()
+        config_copy['players']['p2_color'] = config_copy['players']['p2_color'].lower()
         config_copy['game']['round'] = config_copy['game']['round'].upper()
         return config_copy
 
