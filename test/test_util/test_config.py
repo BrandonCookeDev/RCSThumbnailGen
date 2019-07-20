@@ -30,8 +30,8 @@ class TestConfig(TestCase):
             'p2_character': 'Samus',
             'p3_character': 'Fox',
             'p4_character': 'Luigi',
-            'p1_color': 'Blue',
-            'p2_color': 'Neutral',
+            'p1_color': 'Neutral',
+            'p2_color': 'Pink',
             'p3_color': 'Green',
             'p4_color': 'Red'
         },
@@ -86,10 +86,10 @@ class TestConfig(TestCase):
         self.assertEqual('Luigi', self.config_obj.get_player_4_character())
 
     def test_should_get_player_1_color_from_config(self):
-        self.assertEqual('Blue', self.config_obj.get_player_1_color())
+        self.assertEqual('Neutral', self.config_obj.get_player_1_color())
 
     def test_should_get_player_2_color_from_config(self):
-        self.assertEqual('Neutral', self.config_obj.get_player_2_color())
+        self.assertEqual('Pink', self.config_obj.get_player_2_color())
 
     def test_should_get_player_3_color_from_config(self):
         self.assertEqual('Green', self.config_obj.get_player_3_color())

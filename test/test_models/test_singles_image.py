@@ -9,8 +9,8 @@ from thumbnailgen.models.player import Player
 from thumbnailgen.models.game import Game
 
 GAME = Game('MELEE', 'SINGLES', 'Winners Finals')
-PLAYER1 = Player('cookiE', 'Sheik', 'Blue')
-PLAYER2 = Player('Silver', 'Samus', 'Neutral')
+PLAYER1 = Player('cookiE', 'Sheik', 'Neutral')
+PLAYER2 = Player('Silver', 'Samus', 'Pink')
 BACKGROUND_IMAGE = 'helloworld.jpg'
 FOREGROUND_IMAGE = 'test.png'
 LOGO_IMAGE = 'logo.png'
@@ -45,10 +45,10 @@ class TestSinglesImage(TestCase):
         'players': {
             'p1_tag': 'cookiE',
             'p2_tag': 'Silver',
-            'p1_character': 'Sheik',
-            'p2_character': 'Samus',
-            'p1_color': 'Blue',
-            'p2_color': 'Neutral'
+            'p1_character': 'SHEIK',
+            'p2_character': 'SAMUS',
+            'p1_color': 'Neutral',
+            'p2_color': 'Pink'
         },
         'game': {
             'round': 'Winners Finals',
@@ -65,10 +65,10 @@ class TestSinglesImage(TestCase):
         'players': {
             'p1_tag': 'COOKIE',
             'p2_tag': 'SILVER',
-            'p1_character': 'sheik',
-            'p2_character': 'samus',
-            'p1_color': 'Blue',
-            'p2_color': 'Neutral'
+            'p1_character': 'Sheik',
+            'p2_character': 'Samus',
+            'p1_color': 'neutral',
+            'p2_color': 'pink'
         },
         'game': {
             'round': 'WINNERS FINALS',
