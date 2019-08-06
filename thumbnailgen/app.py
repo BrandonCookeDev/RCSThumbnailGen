@@ -9,6 +9,7 @@ from thumbnailgen.util.image_util import cutoff_width, \
     cutoff_height, convert_to_jpg, resize
 
 config = Config()
+
 if __name__ == '__main__':
     type = config.get_game_type()
     if type is None:
